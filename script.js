@@ -301,12 +301,12 @@ class ChordTransposer {
             'blues7': [{key: 'C', type: '7', display: 'C7'}, {key: 'A#', type: '7', display: 'Bb7'}, {key: 'F', type: '7', display: 'F7'}, {key: 'C', type: '7', display: 'C7'}],
             'blues8': [{key: 'A', type: 'm', display: 'Am'}, {key: 'F', type: '', display: 'F'}, {key: 'G', type: '', display: 'G'}, {key: 'A', type: 'm', display: 'Am'}],
 
-            // Add all other preset categories with similar structure
+            // Folk & Country
             'folk1': [{key: 'C', type: '', display: 'C'}, {key: 'F', type: '', display: 'F'}, {key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}],
             'folk2': [{key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}, {key: 'C', type: '', display: 'C'}, {key: 'F', type: '', display: 'F'}, {key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}, {key: 'C', type: '', display: 'C'}],
             'folk3': [{key: 'A', type: 'm', display: 'Am'}, {key: 'G', type: '', display: 'G'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'A', type: 'm', display: 'Am'}],
             'folk4': [{key: 'C', type: '', display: 'C'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'F', type: '', display: 'F'}, {key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}, {key: 'C', type: '', display: 'C'}],
-            'folk5': [{key: 'A', type: 'm', display: 'Am'}, {key: 'D', type: 'm', display: 'Dm'}, {key: 'E', type: '', display: 'E'}, {key: 'A', type: 'm', display: 'Am'}],
+            'folk5': [{key: 'A', type: 'm', display: 'Am'}, {key: 'D', type: 'm', display: 'Dm'}, {key: 'E', type: '7', display: 'E7'}, {key: 'A', type: 'm', display: 'Am'}],
             
             'country1': [{key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'G', type: '', display: 'G'}, {key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}, {key: 'C', type: '', display: 'C'}],
             'country2': [{key: 'C', type: '', display: 'C'}, {key: 'C', type: '', display: 'C'}, {key: 'F', type: '', display: 'F'}, {key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}, {key: 'G', type: '', display: 'G'}, {key: 'C', type: '', display: 'C'}, {key: 'C', type: '', display: 'C'}],
@@ -314,11 +314,9 @@ class ChordTransposer {
             'country4': [{key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}, {key: 'F', type: '', display: 'F'}, {key: 'C', type: '', display: 'C'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'G', type: '', display: 'G'}, {key: 'C', type: '', display: 'C'}],
             'country5': [{key: 'C', type: '', display: 'C'}, {key: 'A#', type: '', display: 'Bb'}, {key: 'F', type: '', display: 'F'}, {key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}, {key: 'C', type: '', display: 'C'}],
 
-            // Continue with all other categories...
+            // R&B & Soul
             'rnb1': [{key: 'A', type: 'm', display: 'Am'}, {key: 'F', type: '', display: 'F'}, {key: 'G', type: '', display: 'G'}, {key: 'A', type: 'm', display: 'Am'}],
-            'rnb2': [{key: 'C', type: '', display: 'C'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'D', type: 'm', display: 'Dm'}, {key: 'G', type: '', display: 'G'}, {key: 'E', type: 'm', display: 'Em'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'D', type: 'm', display: 'Dm'}, {key: 'G', type: '', display: 'G'}],
-            
-            // Add remaining presets with basic implementations
+            'rnb2': [{key: 'C', type: 'maj7', display: 'Cmaj7'}, {key: 'A', type: 'm7', display: 'Am7'}, {key: 'D', type: 'm7', display: 'Dm7'}, {key: 'G', type: '7', display: 'G7'}, {key: 'E', type: 'm7', display: 'Em7'}, {key: 'A', type: 'm7', display: 'Am7'}, {key: 'D', type: 'm7', display: 'Dm7'}, {key: 'G', type: '7', display: 'G7'}],
             'rnb3': [{key: 'C', type: '', display: 'C'}, {key: 'E', type: 'm', display: 'Em'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'D', type: 'm', display: 'Dm'}, {key: 'G', type: '', display: 'G'}, {key: 'C', type: '', display: 'C'}],
             'rnb4': [{key: 'A', type: 'm', display: 'Am'}, {key: 'D', type: 'm', display: 'Dm'}, {key: 'G', type: '', display: 'G'}, {key: 'F', type: '', display: 'F'}],
             'rnb5': [{key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'E', type: 'm', display: 'Em'}, {key: 'F', type: '', display: 'F'}, {key: 'C', type: '', display: 'C'}, {key: 'D', type: 'm', display: 'Dm'}, {key: 'G', type: '', display: 'G'}],
@@ -326,16 +324,78 @@ class ChordTransposer {
             'rnb7': [{key: 'C', type: '', display: 'C'}, {key: 'E', type: 'm', display: 'Em'}, {key: 'F', type: '', display: 'F'}, {key: 'F', type: 'm', display: 'Fm'}],
             'rnb8': [{key: 'A', type: 'm', display: 'Am'}, {key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}, {key: 'D', type: 'm', display: 'Dm'}],
             'rnb9': [{key: 'C', type: '', display: 'C'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'F', type: '', display: 'F'}, {key: 'G', type: '', display: 'G'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'F', type: '', display: 'F'}, {key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}],
-            'rnb10': [{key: 'D', type: 'm7', display: 'Dm7'}, {key: 'G', type: '7', display: 'G7'}, {key: 'C', type: '', display: 'C'}, {key: 'E', type: 'm7', display: 'Em7'}, {key: 'A', type: 'm7', display: 'Am7'}],
+            'rnb10': [{key: 'D', type: 'm7', display: 'Dm7'}, {key: 'G', type: '7', display: 'G7'}, {key: 'C', type: 'maj7', display: 'Cmaj7'}, {key: 'E', type: 'm7', display: 'Em7'}, {key: 'A', type: 'm7', display: 'Am7'}],
 
-            // Add basic implementations for all remaining categories
+            // Reggae & Caribbean
             'reggae1': [{key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'F', type: '', display: 'F'}],
             'reggae2': [{key: 'A', type: 'm', display: 'Am'}, {key: 'G', type: '', display: 'G'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'G', type: '', display: 'G'}],
             'reggae3': [{key: 'C', type: '', display: 'C'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'F', type: '', display: 'F'}, {key: 'G', type: '', display: 'G'}],
-            'reggae4': [{key: 'A', type: 'm', display: 'Am'}, {key: 'D', type: 'm', display: 'Dm'}, {key: 'E', type: '', display: 'E'}, {key: 'A', type: 'm', display: 'Am'}],
+            'reggae4': [{key: 'A', type: 'm', display: 'Am'}, {key: 'D', type: 'm', display: 'Dm'}, {key: 'E', type: '7', display: 'E7'}, {key: 'A', type: 'm', display: 'Am'}],
             'caribbean1': [{key: 'C', type: '', display: 'C'}, {key: 'F', type: '', display: 'F'}, {key: 'G', type: '', display: 'G'}, {key: 'A', type: 'm', display: 'Am'}],
             'caribbean2': [{key: 'C', type: '', display: 'C'}, {key: 'A#', type: '', display: 'Bb'}, {key: 'F', type: '', display: 'F'}, {key: 'G', type: '', display: 'G'}],
-            'caribbean3': [{key: 'A', type: 'm', display: 'Am'}, {key: 'F', type: '', display: 'F'}, {key: 'G', type: '', display: 'G'}, {key: 'A', type: 'm', display: 'Am'}]
+            'caribbean3': [{key: 'A', type: 'm', display: 'Am'}, {key: 'F', type: '', display: 'F'}, {key: 'G', type: '', display: 'G'}, {key: 'A', type: 'm', display: 'Am'}],
+            
+            // Electronic & Modern
+            'edm1': [{key: 'A', type: 'm', display: 'Am'}, {key: 'F', type: '', display: 'F'}, {key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}],
+            'edm2': [{key: 'A', type: 'm', display: 'Am'}, {key: 'G', type: '', display: 'G'}, {key: 'F', type: '', display: 'F'}, {key: 'G', type: '', display: 'G'}],
+            'edm3': [{key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'F', type: '', display: 'F'}, {key: 'G', type: '', display: 'G'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'F', type: '', display: 'F'}, {key: 'G', type: '', display: 'G'}],
+            'house1': [{key: 'A', type: 'm7', display: 'Am7'}, {key: 'D', type: 'm7', display: 'Dm7'}, {key: 'G', type: '7', display: 'G7'}, {key: 'C', type: 'maj7', display: 'Cmaj7'}],
+            'house2': [{key: 'A', type: 'm', display: 'Am'}, {key: 'E', type: 'm', display: 'Em'}, {key: 'D', type: 'm', display: 'Dm'}, {key: 'A', type: 'm', display: 'Am'}],
+            'trance1': [{key: 'A', type: 'm', display: 'Am'}, {key: 'G', type: '', display: 'G'}, {key: 'F', type: '', display: 'F'}, {key: 'G', type: '', display: 'G'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'G', type: '', display: 'G'}, {key: 'F', type: '', display: 'F'}, {key: 'E', type: '', display: 'E'}],
+            'dubstep1': [{key: 'A', type: 'm', display: 'Am'}, {key: 'A#', type: '', display: 'Bb'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'E', type: '', display: 'E'}],
+            'trap1': [{key: 'A', type: 'm', display: 'Am'}, {key: 'F', type: '', display: 'F'}, {key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}],
+            'synthwave1': [{key: 'A', type: 'm', display: 'Am'}, {key: 'G', type: '', display: 'G'}, {key: 'F', type: '', display: 'F'}, {key: 'E', type: 'm', display: 'Em'}],
+            'ambient1': [{key: 'C', type: 'maj7', display: 'Cmaj7'}, {key: 'E', type: 'm7', display: 'Em7'}, {key: 'A', type: 'm7', display: 'Am7'}, {key: 'F', type: 'maj7', display: 'Fmaj7'}],
+
+            // Latin
+            'bossa1': [{key: 'C', type: 'maj7', display: 'Cmaj7'}, {key: 'A', type: 'm7', display: 'Am7'}, {key: 'D', type: 'm7', display: 'Dm7'}, {key: 'G', type: '7', display: 'G7'}],
+            'salsa1': [{key: 'A', type: 'm7', display: 'Am7'}, {key: 'D', type: 'm7', display: 'Dm7'}, {key: 'E', type: '7', display: 'E7'}, {key: 'A', type: 'm7', display: 'Am7'}],
+            'samba1': [{key: 'C', type: '', display: 'C'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'D', type: 'm', display: 'Dm'}, {key: 'G', type: '', display: 'G'}, {key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}, {key: 'C', type: '', display: 'C'}],
+            'tango1': [{key: 'A', type: 'm', display: 'Am'}, {key: 'E', type: '7', display: 'E7'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'E', type: '7', display: 'E7'}, {key: 'A', type: 'm', display: 'Am'}],
+            'mambo1': [{key: 'C', type: '7', display: 'C7'}, {key: 'F', type: '7', display: 'F7'}, {key: 'G', type: '7', display: 'G7'}, {key: 'C', type: '7', display: 'C7'}],
+            'rumba1': [{key: 'A', type: 'm', display: 'Am'}, {key: 'D', type: 'm', display: 'Dm'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'E', type: '7', display: 'E7'}],
+            'merengue1': [{key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}, {key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}],
+            'bachata1': [{key: 'A', type: 'm', display: 'Am'}, {key: 'G', type: '', display: 'G'}, {key: 'F', type: '', display: 'F'}, {key: 'E', type: '', display: 'E'}],
+
+            // World Music
+            'flamenco1': [{key: 'A', type: 'm', display: 'Am'}, {key: 'A#', type: '', display: 'Bb'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'E', type: '', display: 'E'}],
+            'klezmer1': [{key: 'A', type: 'm', display: 'Am'}, {key: 'D', type: 'm', display: 'Dm'}, {key: 'E', type: '7', display: 'E7'}, {key: 'A', type: 'm', display: 'Am'}],
+            'irish1': [{key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'G', type: '', display: 'G'}, {key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}, {key: 'C', type: '', display: 'C'}],
+            'scottish1': [{key: 'C', type: '', display: 'C'}, {key: 'A#', type: '', display: 'Bb'}, {key: 'C', type: '', display: 'C'}, {key: 'A#', type: '', display: 'Bb'}],
+            'arabic1': [{key: 'A', type: 'm', display: 'Am'}, {key: 'A#', type: '', display: 'Bb'}, {key: 'G', type: '', display: 'G'}, {key: 'A', type: 'm', display: 'Am'}],
+            'indian1': [{key: 'C', type: '', display: 'C'}, {key: 'Db', type: '', display: 'Db'}, {key: 'C', type: '', display: 'C'}, {key: 'A#', type: '', display: 'Bb'}],
+            'gypsy1': [{key: 'A', type: 'm', display: 'Am'}, {key: 'E', type: '7', display: 'E7'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'E', type: '7', display: 'E7'}, {key: 'A', type: 'm', display: 'Am'}],
+            'african1': [{key: 'C', type: '', display: 'C'}, {key: 'A#', type: '', display: 'Bb'}, {key: 'C', type: '', display: 'C'}, {key: 'F', type: '', display: 'F'}],
+
+            // Classical Inspired
+            'classical1': [{key: 'C', type: '', display: 'C'}, {key: 'F', type: '', display: 'F'}, {key: 'G', type: '', display: 'G'}, {key: 'C', type: '', display: 'C'}],
+            'classical2': [{key: 'C', type: '', display: 'C'}, {key: 'D', type: 'm', display: 'Dm'}, {key: 'G', type: '7', display: 'G7'}, {key: 'C', type: '', display: 'C'}],
+            'classical3': [{key: 'A', type: 'm', display: 'Am'}, {key: 'F', type: '', display: 'F'}, {key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}, {key: 'A', type: 'm', display: 'Am'}],
+            'classical4': [{key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'E', type: 'm', display: 'Em'}, {key: 'F', type: '', display: 'F'}, {key: 'C', type: '', display: 'C'}, {key: 'D', type: 'm', display: 'Dm'}, {key: 'G', type: '', display: 'G'}],
+            'baroque1': [{key: 'C', type: '', display: 'C'}, {key: 'G', type: '', display: 'G'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'E', type: 'm', display: 'Em'}, {key: 'F', type: '', display: 'F'}, {key: 'C', type: '', display: 'C'}, {key: 'F', type: '', display: 'F'}, {key: 'G', type: '', display: 'G'}],
+            'romantic1': [{key: 'C', type: '', display: 'C'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'F', type: '', display: 'F'}, {key: 'D', type: 'm', display: 'Dm'}, {key: 'G', type: '7', display: 'G7'}, {key: 'C', type: '', display: 'C'}],
+            'impressionist1': [{key: 'C', type: 'maj7', display: 'Cmaj7'}, {key: 'D', type: 'm9', display: 'Dm9'}, {key: 'C#', type: 'maj7', display: 'C#maj7'}, {key: 'C', type: 'maj7', display: 'Cmaj7'}],
+
+            // Modern Jazz
+            'modern1': [{key: 'C', type: 'maj7', display: 'Cmaj7'}, {key: 'Db', type: 'maj7', display: 'Dbmaj7'}, {key: 'C', type: 'maj7', display: 'Cmaj7'}],
+            'fusion1': [{key: 'A', type: 'm7', display: 'Am7'}, {key: 'D', type: 'm7', display: 'Dm7'}, {key: 'G', type: '7', display: 'G7'}, {key: 'C', type: '7', display: 'C7'}],
+            'bebop1': [{key: 'C', type: 'maj7', display: 'Cmaj7'}, {key: 'A', type: 'm7', display: 'Am7'}, {key: 'D', type: 'm7', display: 'Dm7'}, {key: 'G', type: '7', display: 'G7'}, {key: 'E', type: 'm7', display: 'Em7'}, {key: 'A', type: '7', display: 'A7'}, {key: 'D', type: 'm7', display: 'Dm7'}, {key: 'G', type: '7', display: 'G7'}, {key: 'C', type: 'maj7', display: 'Cmaj7'}],
+            'cool1': [{key: 'D', type: 'm7', display: 'Dm7'}, {key: 'G', type: '7', display: 'G7'}, {key: 'C', type: 'maj7', display: 'Cmaj7'}, {key: 'A', type: 'm7', display: 'Am7'}],
+            'hardbop1': [{key: 'A', type: 'm7', display: 'Am7'}, {key: 'G', type: '7', display: 'G7'}, {key: 'A', type: 'm7', display: 'Am7'}, {key: 'E', type: '7', display: 'E7'}],
+            'freejazz1': [{key: 'C', type: 'maj7', display: 'Cmaj7'}, {key: 'F#', type: 'maj7', display: 'F#maj7'}, {key: 'F', type: 'maj7', display: 'Fmaj7'}, {key: 'D#', type: 'maj7', display: 'D#maj7'}],
+
+            // Funk & Disco
+            'funk1': [{key: 'A', type: 'm7', display: 'Am7'}, {key: 'A', type: 'm7', display: 'Am7'}, {key: 'D', type: 'm7', display: 'Dm7'}, {key: 'A', type: 'm7', display: 'Am7'}],
+            'funk2': [{key: 'C', type: '7', display: 'C7'}, {key: 'F', type: '7', display: 'F7'}, {key: 'C', type: '7', display: 'C7'}, {key: 'C', type: '7', display: 'C7'}],
+            'disco1': [{key: 'C', type: '', display: 'C'}, {key: 'A', type: 'm', display: 'Am'}, {key: 'F', type: '', display: 'F'}, {key: 'G', type: '', display: 'G'}],
+            'disco2': [{key: 'D', type: 'm7', display: 'Dm7'}, {key: 'G', type: '7', display: 'G7'}, {key: 'C', type: 'maj7', display: 'Cmaj7'}, {key: 'A', type: 'm7', display: 'Am7'}],
+            'pfunk1': [{key: 'A', type: 'm7', display: 'Am7'}, {key: 'G', type: '7', display: 'G7'}, {key: 'F', type: '7', display: 'F7'}, {key: 'A', type: 'm7', display: 'Am7'}],
+
+            // Experimental
+            'quartal1': [{key: 'F', type: 'sus2', display: 'Fsus2'}, {key: 'A#', type: 'sus2', display: 'Bbsus2'}, {key: 'D#', type: 'sus2', display: 'Ebsus2'}, {key: 'G#', type: 'sus2', display: 'Absus2'}],
+            'atonal1': [{key: 'C', type: '', display: 'C'}, {key: 'F#', type: '', display: 'F#'}, {key: 'A#', type: '', display: 'Bb'}, {key: 'E', type: '', display: 'E'}],
+            'whole1': [{key: 'C', type: '', display: 'C'}, {key: 'D', type: '', display: 'D'}, {key: 'E', type: '', display: 'E'}, {key: 'F#', type: '', display: 'F#'}, {key: 'G#', type: '', display: 'G#'}, {key: 'A#', type: '', display: 'Bb'}],
+            'chromatic1': [{key: 'C', type: '', display: 'C'}, {key: 'C#', type: '', display: 'C#'}, {key: 'D', type: '', display: 'D'}, {key: 'D#', type: '', display: 'D#'}, {key: 'E', type: '', display: 'E'}, {key: 'F', type: '', display: 'F'}]
         };
     }
     
