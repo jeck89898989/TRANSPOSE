@@ -1,0 +1,226 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chord Transposition Tool</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Chord Transposition Tool</h1>
+            <p>Enter up to 20 chords and see them transposed to all keys</p>
+        </header>
+
+        <div class="input-section">
+            <h2>Enter Your Chords</h2>
+            
+            <div class="preset-section">
+                <label for="preset-select">Quick Start - Choose a Preset:</label>
+                <select id="preset-select">
+                    <option value="">-- Select a Chord Progression --</option>
+                    
+                    <!-- Original Presets -->
+                    <optgroup label="Basic Progressions">
+                        <option value="pop1">I-V-vi-IV (Pop Progression)</option>
+                        <option value="pop2">vi-IV-I-V (Pop Alternative)</option>
+                        <option value="jazz1">ii-V-I (Jazz Standard)</option>
+                        <option value="basic1">I-IV-V (Basic Major)</option>
+                        <option value="basic2">i-iv-V (Basic Minor)</option>
+                        <option value="blues">I-I-I-I-IV-IV-I-I-V-IV-I-I (12-Bar Blues)</option>
+                        <option value="circle">vi-ii-V-I (Circle of Fifths)</option>
+                        <option value="modal">I-bVII-IV-I (Modal Rock)</option>
+                    </optgroup>
+
+                    <!-- Pop & Rock -->
+                    <optgroup label="Pop & Rock">
+                        <option value="pop3">I-vi-IV-V (50s Progression)</option>
+                        <option value="pop4">I-V-vi-iii-IV-I-IV-V (Canon in D)</option>
+                        <option value="pop5">vi-V-IV-V (Emotional Pop)</option>
+                        <option value="pop6">I-bVII-IV-I (Mixolydian Pop)</option>
+                        <option value="pop7">I-vi-ii-V (Doo-Wop)</option>
+                        <option value="pop8">vi-IV-V-I (Pop Ballad)</option>
+                        <option value="pop9">I-V-IV-vi (Alternative Rock)</option>
+                        <option value="pop10">I-bVI-bVII-I (Aeolian Cadence)</option>
+                        <option value="rock1">I-bVII-IV-I (Rock Anthem)</option>
+                        <option value="rock2">i-bVI-bVII-i (Minor Rock)</option>
+                        <option value="rock3">I-IV-vi-V (Stadium Rock)</option>
+                        <option value="rock4">i-v-iv-i (Minor Power)</option>
+                        <option value="rock5">I-V-bVII-IV (Classic Rock)</option>
+                        <option value="rock6">i-bIII-bVII-IV (Gothic Rock)</option>
+                        <option value="rock7">I-ii-V-I (Rock Turnaround)</option>
+                        <option value="rock8">i-bII-bVII-i (Phrygian Rock)</option>
+                    </optgroup>
+
+                    <!-- Jazz Standards -->
+                    <optgroup label="Jazz Standards">
+                        <option value="jazz2">ii-V-I-vi (Extended Jazz)</option>
+                        <option value="jazz3">I-vi-ii-V-iii-vi-ii-V (Rhythm Changes A)</option>
+                        <option value="jazz4">iii-vi-ii-V (Turnaround)</option>
+                        <option value="jazz5">I-I7-IV-iv (Jazz Blues)</option>
+                        <option value="jazz6">ii-V-iii-vi (Minor ii-V)</option>
+                        <option value="jazz7">I-bII7-ii-V (Tritone Sub)</option>
+                        <option value="jazz8">vi-ii-V-I-IV-vii-iii-vi (Giant Steps)</option>
+                        <option value="jazz9">i-iv-i-V (Minor Jazz)</option>
+                        <option value="jazz10">I-vi-IV-V7 (Tin Pan Alley)</option>
+                        <option value="jazz11">ii-V-I-bII7 (Modern Jazz)</option>
+                        <option value="jazz12">I-III7-vi-VI7 (Chromatic)</option>
+                        <option value="jazz13">ii-bII-I (Half-Step Approach)</option>
+                        <option value="jazz14">I-V/vi-vi-ii-V-I (Secondary Dom)</option>
+                    </optgroup>
+
+                    <!-- Blues Variations -->
+                    <optgroup label="Blues">
+                        <option value="blues2">I7-I7-I7-I7-IV7-IV7-I7-I7-V7-V7-I7-V7 (Chicago Blues)</option>
+                        <option value="blues3">I7-IV7-I7-I7-IV7-IV7-I7-V7-IV7-IV7-I7-I7 (Slow Blues)</option>
+                        <option value="blues4">i7-i7-i7-i7-iv7-iv7-i7-i7-V7-iv7-i7-i7 (Minor Blues)</option>
+                        <option value="blues5">I7-I7-I7-I7-IV7-#iv°7-I7-vi7-ii7-V7-I7-V7 (Jazz Blues)</option>
+                        <option value="blues6">I-I-I-I-IV-IV-I-I-V-IV-I-I (Country Blues)</option>
+                        <option value="blues7">I7-bVII7-IV7-I7 (Rock Blues)</option>
+                        <option value="blues8">i-bVI-bVII-i (Minor Rock Blues)</option>
+                    </optgroup>
+
+                    <!-- Folk & Country -->
+                    <optgroup label="Folk & Country">
+                        <option value="folk1">I-IV-I-V (Simple Folk)</option>
+                        <option value="folk2">I-V-I-IV-I-V-I (Celtic)</option>
+                        <option value="folk3">i-bVII-i-i (Modal Folk)</option>
+                        <option value="folk4">I-vi-IV-I-V-I (Traditional)</option>
+                        <option value="folk5">i-iv-V-i (Minor Folk)</option>
+                        <option value="country1">I-V-vi-V-I-V-I (Country Waltz)</option>
+                        <option value="country2">I-I-IV-I-V-V-I-I (Country 8-Bar)</option>
+                        <option value="country3">I-IV-vi-V (Country Pop)</option>
+                        <option value="country4">I-V-IV-I-vi-V-I (Nashville)</option>
+                        <option value="country5">I-bVII-IV-I-V-I (Country Rock)</option>
+                    </optgroup>
+
+                    <!-- R&B & Soul -->
+                    <optgroup label="R&B & Soul">
+                        <option value="rnb1">i-bVI-bVII-i (Soul Progression)</option>
+                        <option value="rnb2">I-vi-ii-V-iii-vi-ii-V (R&B Turnaround)</option>
+                        <option value="rnb3">I-iii-vi-ii-V-I (Motown)</option>
+                        <option value="rnb4">i-iv-bVII-bVI (Minor Soul)</option>
+                        <option value="rnb5">I-V-vi-iii-IV-I-ii-V (Neo-Soul)</option>
+                        <option value="rnb6">vi-IV-I-V-iii-vi (Contemporary R&B)</option>
+                        <option value="rnb7">I-iii-IV-iv (Gospel Progression)</option>
+                        <option value="rnb8">i-bIII-bVII-iv (Dark R&B)</option>
+                        <option value="rnb9">I-vi-IV-V-vi-IV-I-V (Extended Soul)</option>
+                        <option value="rnb10">ii-V-I-iii-vi (Smooth Jazz R&B)</option>
+                    </optgroup>
+
+                    <!-- Reggae & Caribbean -->
+                    <optgroup label="Reggae & Caribbean">
+                        <option value="reggae1">I-V-vi-IV (Reggae Classic)</option>
+                        <option value="reggae2">i-bVII-i-bVII (Minor Reggae)</option>
+                        <option value="reggae3">I-vi-IV-V (Island Pop)</option>
+                        <option value="reggae4">i-iv-V-i (Dub Progression)</option>
+                        <option value="caribbean1">I-IV-V-vi (Calypso)</option>
+                        <option value="caribbean2">I-bVII-IV-V (Ska)</option>
+                        <option value="caribbean3">i-bVI-bVII-i (Dancehall)</option>
+                    </optgroup>
+
+                    <!-- Electronic & Modern -->
+                    <optgroup label="Electronic & Modern">
+                        <option value="edm1">vi-IV-I-V (EDM Drop)</option>
+                        <option value="edm2">i-bVII-bVI-bVII (Dark Electronic)</option>
+                        <option value="edm3">I-V-vi-IV-V-vi-IV-V (Build-Up)</option>
+                        <option value="house1">vi-ii-V-I (Deep House)</option>
+                        <option value="house2">i-v-iv-i (Tech House)</option>
+                        <option value="trance1">i-bVII-bVI-bVII-i-bVII-bVI-V (Trance)</option>
+                        <option value="dubstep1">i-bII-i-V (Dubstep)</option>
+                        <option value="trap1">i-bVI-bIII-bVII (Trap)</option>
+                        <option value="synthwave1">i-bVII-bVI-v (Synthwave)</option>
+                        <option value="ambient1">I-iii-vi-IV (Ambient Chill)</option>
+                    </optgroup>
+
+                    <!-- Latin -->
+                    <optgroup label="Latin">
+                        <option value="bossa1">IMaj7-vi7-ii7-V7 (Bossa Nova)</option>
+                        <option value="salsa1">i7-iv7-V7-i7 (Salsa)</option>
+                        <option value="samba1">I-vi-ii-V-I-V-I (Samba)</option>
+                        <option value="tango1">i-V-i-V-i (Tango)</option>
+                        <option value="mambo1">I7-IV7-V7-I7 (Mambo)</option>
+                        <option value="rumba1">i-iv-i-V (Rumba)</option>
+                        <option value="merengue1">I-V-I-V (Merengue)</option>
+                        <option value="bachata1">i-bVII-bVI-V (Bachata)</option>
+                    </optgroup>
+
+                    <!-- World Music -->
+                    <optgroup label="World Music">
+                        <option value="flamenco1">i-bII-i-V (Flamenco)</option>
+                        <option value="klezmer1">i-iv-V-i (Klezmer)</option>
+                        <option value="irish1">I-V-vi-V-I-V-I (Irish Jig)</option>
+                        <option value="scottish1">I-bVII-I-bVII (Scottish)</option>
+                        <option value="arabic1">i-bII-bVII-i (Arabic Scale)</option>
+                        <option value="indian1">I-bII-I-bVII (Raga-inspired)</option>
+                        <option value="gypsy1">i-V-i-V-i (Gypsy Jazz)</option>
+                        <option value="african1">I-bVII-I-IV (African)</option>
+                    </optgroup>
+
+                    <!-- Classical Inspired -->
+                    <optgroup label="Classical Inspired">
+                        <option value="classical1">I-IV-V-I (Authentic Cadence)</option>
+                        <option value="classical2">I-ii-V-I (Plagal Extension)</option>
+                        <option value="classical3">vi-IV-I-V-vi (Deceptive)</option>
+                        <option value="classical4">I-V-vi-iii-IV-I-ii-V (Circle Progression)</option>
+                        <option value="baroque1">I-V-vi-iii-IV-I-IV-V (Baroque Sequence)</option>
+                        <option value="romantic1">I-vi-IV-ii-V-I (Romantic)</option>
+                        <option value="impressionist1">I-ii-bII-I (Impressionist)</option>
+                    </optgroup>
+
+                    <!-- Modern Jazz -->
+                    <optgroup label="Modern Jazz">
+                        <option value="modern1">IMaj7-bIIMaj7-IMaj7 (Modern)</option>
+                        <option value="fusion1">i7-iv7-bVII7-I7 (Fusion)</option>
+                        <option value="bebop1">I-vi-ii-V-iii-vi-ii-V-I (Bebop)</option>
+                        <option value="cool1">ii7-V7-IMaj7-vi7 (Cool Jazz)</option>
+                        <option value="hardbop1">i7-bVII7-i7-V7 (Hard Bop)</option>
+                        <option value="freejazz1">IMaj7-bVMaj7-IVMaj7-bIIIMaj7 (Free Jazz)</option>
+                    </optgroup>
+
+                    <!-- Funk & Disco -->
+                    <optgroup label="Funk & Disco">
+                        <option value="funk1">i7-i7-iv7-i7 (Funk Vamp)</option>
+                        <option value="funk2">I7-IV7-I7-I7 (James Brown)</option>
+                        <option value="disco1">I-vi-IV-V (Disco Classic)</option>
+                        <option value="disco2">ii7-V7-I-vi7 (Disco Funk)</option>
+                        <option value="pfunk1">i7-bVII7-IV7-i7 (P-Funk)</option>
+                    </optgroup>
+
+                    <!-- Experimental -->
+                    <optgroup label="Experimental">
+                        <option value="quartal1">Fsus2-Bbsus2-Ebsus2-Absus2 (Quartal)</option>
+                        <option value="atonal1">C-F#-Bb-E (Atonal)</option>
+                        <option value="whole1">C-D-E-F#-G#-Bb (Whole Tone)</option>
+                        <option value="chromatic1">C-C#-D-D#-E-F (Chromatic)</option>
+                    </optgroup>
+                </select>
+                <button id="load-preset" class="btn">Load Preset</button>
+            </div>
+
+            <div id="chord-inputs">
+                <!-- Chord inputs will be generated here -->
+            </div>
+            <div class="controls">
+                <button id="add-chord" class="btn">Add Chord</button>
+                <button id="transpose" class="btn btn-primary">Transpose All</button>
+                <button id="clear-all" class="btn btn-secondary">Clear All</button>
+            </div>
+        </div>
+
+        <div class="result-section" id="result-section">
+            <h2>Transposition Grid</h2>
+            <div class="grid-container">
+                <table id="transposition-grid">
+                    <!-- Grid will be generated here -->
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

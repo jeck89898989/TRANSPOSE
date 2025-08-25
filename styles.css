@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    line-height: 1.6;
+    background-color: #fafafa;
+    color: #333;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.input-section {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.input-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.chord-input {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.chord-input:hover {
+    background: #f1f3f4;
+}
+
+.chord-input label {
+    min-width: 80px;
+    font-weight: 700;
+}
+
+.chord-input select {
+    padding: 8px 12px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    background: white;
+    transition: border-color 0.2s ease;
+}
+
+.chord-input select:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+.remove-chord {
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+.remove-chord:hover {
+    background: #ff3742;
+    transform: translateY(-1px);
+}
+
+.controls {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    background: #e9ecef;
+    color: #333;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-primary {
+    background: #4a90e2;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #357abd;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+}
+
+.result-section {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.result-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.grid-container {
+    overflow-x: auto;
+}
+
+#transposition-grid {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#transposition-grid th,
+#transposition-grid td {
+    padding: 12px 8px;
+    text-align: center;
+    border: 1px solid #e9ecef;
+    min-width: 80px;
+}
+
+#transposition-grid th {
+    background: #f8f9fa;
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+#transposition-grid th:first-child {
+    left: 0;
+    z-index: 11;
+    background: #e9ecef;
+}
+
+#transposition-grid td:first-child {
+    background: #f8f9fa;
+    font-weight: 700;
+    position: sticky;
+    left: 0;
+    z-index: 9;
+}
+
+#transposition-grid tbody tr:hover {
+    background: #f1f3f4;
+}
+
+#transposition-grid tbody tr:hover td:first-child {
+    background: #e9ecef;
+}
+
+.hidden {
+    display: none;
+}
+
+.preset-section {
+    background: #f0f4f8;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.preset-section label {
+    font-weight: 700;
+    min-width: 200px;
+}
+
+.preset-section select {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    background: white;
+    transition: border-color 0.2s ease;
+}
+
+.preset-section select:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .chord-input {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    
+    .chord-input label {
+        min-width: auto;
+    }
+    
+    .controls {
+        justify-content: center;
+    }
+    
+    #transposition-grid {
+        font-size: 12px;
+    }
+    
+    #transposition-grid th,
+    #transposition-grid td {
+        padding: 8px 4px;
+        min-width: 60px;
+    }
+    
+    .preset-section {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    
+    .preset-section label {
+        min-width: auto;
+    }
+    
+    .preset-section select {
+        min-width: auto;
+    }
+}
